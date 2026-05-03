@@ -116,10 +116,10 @@
 
 # ! Emails ki list
 # emails = [
-#     "Hello, how are you?", 
-#     "Win a free iPhone now!", 
-#     "Warning: This file contains a virus", 
-#     "Meeting scheduled for tomorrow", 
+#     "Hello, how are you?",
+#     "Win a free iPhone now!",
+#     "Warning: This file contains a virus",
+#     "Meeting scheduled for tomorrow",
 #     "Download this malware.exe file"
 # ]
 
@@ -128,20 +128,30 @@
 # for mail in emails:
 #     # Safai ke liye text ko lower case mein convert kar rahe hain
 #     check_mail = mail.lower()
-    
+
 #     # Check karein agar unsafe words hain
 #     if "virus" in check_mail or "malware" in check_mail:
 #         print("ALERT: Unsafe email blocked!")
 #         continue  # Is email ko skip kar dou aur aglay par jao
-    
+
 #     # Agar email safe hai toh ye line chalegi
 #     print(f"Processing Email: {mail}")
 
 # print("--- Scanning Finished ---")
 
 
+# for i in range(1,10):
+#     print(f"Range: {i}")
+# else:
+#     print("Loops is complete")
 
-for i in range(1,10):
-    print(f"Range: {i}")
-else:
-    print("Loops is complete")
+
+# * even number check
+
+items = [1, 3, 5, 7, 9]
+for i in items:
+    if i % 2 == 0:
+        print(f"Even number found: {i}")
+        break
+    else:
+        print(f"All number are Odd")

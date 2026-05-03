@@ -114,27 +114,34 @@
 #     print(f"Processing Email in {email}")
 
 
-# Emails ki list
-emails = [
-    "Hello, how are you?", 
-    "Win a free iPhone now!", 
-    "Warning: This file contains a virus", 
-    "Meeting scheduled for tomorrow", 
-    "Download this malware.exe file"
-]
+# ! Emails ki list
+# emails = [
+#     "Hello, how are you?", 
+#     "Win a free iPhone now!", 
+#     "Warning: This file contains a virus", 
+#     "Meeting scheduled for tomorrow", 
+#     "Download this malware.exe file"
+# ]
 
-print("--- Email Scanning Started ---")
+# print("--- Email Scanning Started ---")
 
-for mail in emails:
-    # Safai ke liye text ko lower case mein convert kar rahe hain
-    check_mail = mail.lower()
+# for mail in emails:
+#     # Safai ke liye text ko lower case mein convert kar rahe hain
+#     check_mail = mail.lower()
     
-    # Check karein agar unsafe words hain
-    if "virus" in check_mail or "malware" in check_mail:
-        print("ALERT: Unsafe email blocked!")
-        continue  # Is email ko skip kar dou aur aglay par jao
+#     # Check karein agar unsafe words hain
+#     if "virus" in check_mail or "malware" in check_mail:
+#         print("ALERT: Unsafe email blocked!")
+#         continue  # Is email ko skip kar dou aur aglay par jao
     
-    # Agar email safe hai toh ye line chalegi
-    print(f"Processing Email: {mail}")
+#     # Agar email safe hai toh ye line chalegi
+#     print(f"Processing Email: {mail}")
 
-print("--- Scanning Finished ---")
+# print("--- Scanning Finished ---")
+
+
+
+for i in range(1,10):
+    print(f"Range: {i}")
+else:
+    print("Loops is complete")

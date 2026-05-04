@@ -61,7 +61,6 @@ Welcome to my Python learning repository! This project is a comprehensive docume
 **Muhammad Bilal Hussain**
 * 🎓 BS Software Engineering Student at SMIU
 * 💻 Frontend Developer & Aspiring AI Engineer
-* 🏆 Selected for Aspire Leaders Program 2026 & Stanford Code in Place
-
+  
 ---
 *Last Updated: May 2026*

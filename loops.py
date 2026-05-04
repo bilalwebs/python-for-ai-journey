@@ -146,12 +146,85 @@
 #     print("Loops is complete")
 
 
-# * even number check
+# *1. even number check
 
-items = [1, 3, 5, 7, 9]
-for i in items:
-    if i % 2 == 0:
-        print(f"Even number found: {i}")
-        break
-    else:
-        print(f"All number are Odd")
+# items = [1, 3, 5, 7, 9]
+# for i in items:
+#     if i % 2 == 0:
+#         print(f"Even number found: {i}")
+#         break
+#     else:
+#         print(f"All number are Odd")
+
+# * 2.
+# names = ['Kamara', 'Bilal', None, 'Nabeel']
+
+# for name in names:
+#     if name is None:
+#         print(f"Foun is missing name.")
+#         break
+# else:
+#     print(F"All name avalibale")
+
+# * 3.
+# files = ['data1.csv',
+#          'report.pdf   ',
+#          'reporst.pdf   ',
+#          'dataset.csv '
+#          ]
+
+# all_file = True
+# for file in files:
+#     file = file.strip()
+#     if not file.endswith('.csv'):
+#         print(f"{file} is not csv")
+#         all_file = False
+# else:
+#     print(f"All File are csv")
+
+
+# *
+# files = ['data1.csv',
+#          'report.pdf   ',
+#          'reporst.pdf   ',
+#          'dataset.csv '
+#          ]
+
+# for file in files:
+#     file = file.strip()
+#     if not file.endswith(".csv"):
+#         print(f"{file} is not csv")
+#         # continue
+#         break
+# else:
+#     print(f"All file are csv")
+
+
+# *
+# files = ['data1.csv',
+#          'report.pdf   ',
+#          'reporst.pdf   ',
+#          'dataset.csv '
+#          ]
+
+# for file in files:
+#     file = file.strip()
+#     if not file.endswith(".csv"):
+#         print(f"{file} is not csv")
+
+# ! challanege
+
+file_list = [
+    'report.csv',
+    'data.xlsx',
+    'data.csv',
+    'summary.docs',
+    'report.csv',
+    'data.csv',
+]
+file_data = []
+for file in file_list:
+    if file not in file_data:
+        file_data.append(file)
+
+print(f"All Unique file", file_data)

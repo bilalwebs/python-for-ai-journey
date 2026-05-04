@@ -232,7 +232,7 @@
 
 # ! outer and inner loop
 
-#* method 1
+# * method 1
 # for x in [1, 2, 3]:
 #     for y in [1, 2]:
 #         print(x, y)
@@ -243,7 +243,36 @@
 #     for y in range(2): #inner loop
 #         print(x,y)
 
-for x in range(3): #outer loop
-    for y in range(2): #inner loop
-        for z in range(2):
-            print(f"({x},{y},{z})")
+# for x in range(3): #outer loop
+#     for y in range(2): #inner loop
+#         for z in range(2):
+#             print(f"({x},{y},{z})")
+
+# *
+# colors = ['red', 'green', 'blue']
+# sizes = ["S", "M", "L"]
+
+# for color in colors:
+#     for size in sizes:
+#         print(f"{color} - Size {size}")
+
+
+# *
+# years = [2026, 2027]
+# months = ['Jan', 'Feb']
+# days = range(1, 29)
+
+# for y in years:
+#     for m in months:
+#         for d in days:
+#             print(f"report_{y}_{m}_{d}.csv")
+
+
+# *
+# SELECT count(*) FROM customers where id IS NULL;
+tables = ['customer', 'order', 'product', 'price']
+columns = ['id', 'created_date']
+
+for t in tables:
+    for c in columns:
+        print(f"SELECT count(*) FROM {c} where {c} IS NULL;")

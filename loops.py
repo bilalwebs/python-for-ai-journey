@@ -214,17 +214,36 @@
 
 # ! challanege
 
-file_list = [
-    'report.csv',
-    'data.xlsx',
-    'data.csv',
-    'summary.docs',
-    'report.csv',
-    'data.csv',
-]
-file_data = []
-for file in file_list:
-    if file not in file_data:
-        file_data.append(file)
+# file_list = [
+#     'report.csv',
+#     'data.xlsx',
+#     'data.csv',
+#     'summary.docs',
+#     'report.csv',
+#     'data.csv',
+# ]
+# file_data = []
+# for file in file_list:
+#     if file not in file_data:
+#         file_data.append(file)
 
-print(f"All Unique file", file_data)
+# print(f"All Unique file", file_data)
+
+
+# ! outer and inner loop
+
+#* method 1
+# for x in [1, 2, 3]:
+#     for y in [1, 2]:
+#         print(x, y)
+
+
+# * method 2
+# for x in range(3): #outer loop
+#     for y in range(2): #inner loop
+#         print(x,y)
+
+for x in range(3): #outer loop
+    for y in range(2): #inner loop
+        for z in range(2):
+            print(f"({x},{y},{z})")

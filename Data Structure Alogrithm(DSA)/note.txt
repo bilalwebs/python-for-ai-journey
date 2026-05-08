@@ -1,0 +1,6 @@
+
+
+primitive data type
+1.string ("helo world")
+2.int (11,22)
+3.bool (true or false)

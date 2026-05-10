@@ -4,3 +4,20 @@ primitive data type
 1.string ("helo world")
 2.int (11,22)
 3.bool (true or false)
+
+four types of Data Structure
+1.list --> ['bilal'] # common
+2.tuple --> (10,20,22) # no change
+3.dictionary -->{'a':10,'b':11} # {'key':'value'}
+4.set --> {1,2,3,4} # unique
+
+
+function vs method
+
+#! function
+costs = [10,26]
+len(costs)
+
+#! method
+costs= [19,28]
+costs.remove(19)

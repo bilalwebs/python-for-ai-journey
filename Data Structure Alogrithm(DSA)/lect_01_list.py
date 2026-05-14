@@ -75,6 +75,7 @@
 # print(matrix[1][1])
 
 # todo slicing
+import copy
 lst = ['a', 'b', 'c', 'd']
 
 # print(lst[:2])
@@ -399,3 +400,161 @@ letters = ['c', 'a', 'b']
 new_reverse = list(reversed(letters))
 # print("Origional List: ", letters)
 # print("Reversed List: ", new_reverse)
+
+
+# todo: copy -> # reference assignment using =
+# letters = ['c', 'a', 'b']
+# letters.append('z')
+# letters.sort()
+# letters.pop(-1)
+# letters.pop()
+# letters_copy = letters
+# print("Origional List: ", letters)
+# print("Copy List: ", letters_copy)
+
+
+# todo: copy() creates a shallow copy of the list.
+# todo: The outer list becomes separate in memory,
+# todo: but nested objects are still shared between both lists.
+
+
+letters = ['c', 'a', 'b']
+# letters.append('z')
+# letters.sort()
+# letters.pop(-1)
+# letters.pop()
+letters_copy = letters.copy()
+letters_copy.append('z')
+letters_copy.sort()
+letters_copy.pop(-1)
+# print("Origional List: ", letters)
+# print("Copy List: ", letters_copy)
+
+
+# matrix
+
+# matrix = [
+#     ['a', 'b', 'c'],
+#     ['d', 'e', 'f'],
+# ]
+
+# matrix_cpy = matrix.copy()
+# matrix.pop()
+# matrix_cpy[0].append('z')
+# print("Origional List: ", matrix)
+# print("Copy List: ", matrix_cpy)
+
+
+# ! import copy
+# * copy.deepcopy() create a true,indepent copy for all levels
+# * copy.copy() create a SHALLOW copy like just the method copy(),is more general than list.copy() ,not limited lists
+matrix = [
+    ['a', 'b', 'c'],
+    ['d', 'e', 'f'],
+]
+
+# matrix_cpy = copy.deepcopy(matrix)
+matrix_cpy = copy.copy(matrix)
+matrix.pop()
+matrix_cpy[0].append('z')
+# print("Origional List: ", matrix)
+# print("Copy List: ", matrix_cpy)
+
+
+# ! Assignment
+
+origional = [
+    ['a', 'b'],
+    ['c', 'd'],
+]
+
+
+copy1 = origional
+# print("Same object?", origional is copy1, "\n")
+
+
+# shallow copy
+copy2 = origional.copy()
+# print("Same object?", origional is copy2)
+# print("Shared List?", origional[0] is copy2[0], "\n")
+
+
+# deep copy
+copy3 = copy.deepcopy(origional)
+# print("Same object?", origional is copy3)
+# print("Shared List?", origional[0] is copy3[0], "\n")
+
+
+# ! combining
+
+letter = ['a', 'b', 'c']
+numbers = [1, 2, 3, 4]
+
+# comb = letter + numbers
+# print("Combined", letter + numbers)
+
+
+# ? extend()-> doesnot create a new list; it expand the origional one
+numbers.extend(letter)
+# print(numbers)
+
+
+# ? zip()
+
+# comb = list(zip(numbers, letter))
+comb = list(zip(numbers, letter, "Hi"))
+# print(comb)
+
+
+# todo: Iterable
+# * An object that can be looped through one by one using a for loop.
+# * Examples: list, tuple, string, set, dictionary
+
+l = ['apple', 'bananana', 'grapes']
+# for fruit in l:
+# print(fruit.upper())
+
+# todo: Iterator:
+# * An object that keeps track of the current position during iteration
+# * and returns the next value using next().
+
+
+l = ['apple', 'bananana', 'grapes']
+
+# * 1. enumerate()
+# print(list(enumerate(l)))
+# for index, value in enumerate(l):
+# print(index, value)
+
+# * 2. reversed()
+# print(reversed(l))
+# print(list(reversed(l)))
+
+
+# for reverse in reversed(l):
+#     print(reverse)
+
+
+# * 3. zip()
+# number = [1, 2, 3]
+# print(zip(l, number))
+# print(list(zip(l, number)))
+
+# for l, n in zip(number, l):
+#     print(l, n)
+
+
+# * 4. map
+# print(list(map(str.upper,l)))
+
+number = [1, 2, 3, 4]
+# print(list(map(int,number)))
+
+name = [' bilal', ' nabeel', '  akmal  ']
+# print(list(map(str.strip,name)))
+
+# * 5. filter
+
+letterss = ['a', '', 'b', None, 'c', None]
+print(filter(None, letterss))
+print(list(filter(None, letterss)))
